@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import { useRouter } from "next/router";
+import SearchResults from "../components/SearchResults";
 
 const API_KEY = process.env.API_KEY;
 const CONTEXT_KEY = process.env.CONTEXT_KEY;
@@ -16,6 +17,7 @@ function Search({ results }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <SearchResults results={results} />
     </div>
   );
 }
